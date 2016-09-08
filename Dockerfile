@@ -44,4 +44,5 @@ RUN install2.r --error \
   dbscan \
   binom \
   data.table \
-  readr
+  readr \
+  corrplot
