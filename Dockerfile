@@ -45,4 +45,5 @@ RUN install2.r --error \
   binom \
   data.table \
   readr \
-  corrplot
+  corrplot \
+  caret
