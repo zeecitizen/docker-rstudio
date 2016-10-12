@@ -46,4 +46,10 @@ RUN install2.r --error \
   data.table \
   readr \
   corrplot \
-  caret
+  caret \
+  nnet \
+  randomForest \
+  ranger \
+  xgboost \
+  rpart \
+  kernlab
