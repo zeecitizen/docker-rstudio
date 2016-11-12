@@ -1,5 +1,15 @@
 FROM rocker/rstudio
 
+RUN apt-get update && \
+  apt-get install -y \
+  libgdal1-dev \
+  libproj-dev \
+  libv8-dev \
+  ssh && \
+  apt-get clean all
+
+
+
 RUN apt-get install -y software-properties-common \
   && add-apt-repository ppa:webupd8team/java \
   && apt-get update \
@@ -8,14 +18,6 @@ RUN apt-get install -y software-properties-common \
   && apt-get clean all -y
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-
-RUN apt-get update && \
-  apt-get install -y \
-  libgdal1-dev \
-  libproj-dev \
-  libv8-dev \
-  ssh && \
-  apt-get clean all
 
 RUN install2.r --error \
   gbm \
